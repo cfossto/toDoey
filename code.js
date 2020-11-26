@@ -4,16 +4,22 @@ let toDoList = [];
 
 
 
-
+// Button-click
 $("#btn").click( function (){
     
     
     let inputs = $("#inputs");
+
+    // Check if empty, else - add
     checkIfEmptyAndAdd(inputs.val())
 
+    // Log for debugging purposes
     console.log(toDoList)
+
+    // Emptys value-field
     $(inputs).val(""); 
    
+    
     showList();
     markAsDone();
     deleteThings();
@@ -24,11 +30,14 @@ $("#btn").click( function (){
 function showList(){
 
     let list = $(".todoList");
-    list.empty();
 
-    for (let things of toDoList){
+    // deprecated, but keeping for historic value
+    // list.empty();
 
-        $(".todoList").append("<li class='.liNormal'>"+things+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
+    for (let thing of toDoList){
+
+        // Adding elements to screen-list, one by one.
+        $(".todoList").append("<li class='.liNormal'>"+thing+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
     }
 }
 
@@ -62,7 +71,6 @@ function markAsDone(){
             });*/
 
         $(l).click( function() {  
-            
             $(this).toggleClass("blue")
     
 
