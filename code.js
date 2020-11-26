@@ -61,14 +61,6 @@ function markAsDone(){
     let allLi = $("li");
 
     for (let l of allLi){
-        
-        /*
-        $(l).mousedown(
-            function (){
-
-                $(l).css("text-decoration","line-through")
-                $(l).css("background-color","#87ceeb")
-            });*/
 
         $(l).click( function() {  
             $(this).toggleClass("blue")
