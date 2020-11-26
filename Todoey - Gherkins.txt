@@ -1,0 +1,53 @@
+FEATURE
+SCENARIO
+GIVEN
+(AND)
+WHEN
+(AND)
+THEN
+(AND)
+
+
+
+
+
+Feature: Att-göra-lista
+
+Scenario: Lägga till saker i listan
+
+Given: jag är på första-sidan
+When: Skriver in saken jag vill lägga till
+And: Trycker på knappen "Lägg till"
+Then: Lägg till i lista
+And: Spara till listan nedanför
+
+
+
+
+
+Scenario: Markera saker som gjorda
+
+Given: Sakerna är i listan
+And: är inte tom
+When: jag klickar på saken i listan
+Then: Strikethrough
+And: Annan bakgrundsfärg
+
+
+
+Scenario: Radera saker från listan
+
+Given: Sakerna är i listan
+And: inte tom
+When: jag klickar på ett kryss vid saken
+Then: Tar bort saken helt från listan
+
+
+Scenario: Kontrollera att fältet inte är tomt vid inmatning
+
+Given: Jag är på första sidan
+And: fältet är tomt
+When: fältet är tomt
+Then: alert att fältet är tomt
+and: returnera false
+
