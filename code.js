@@ -33,11 +33,10 @@ $("#btn").click( function (){
 function addToListOnScreen(va){
 
     $(".todoList").append("<li>"+va+"</li");
-
-
-
-
 }
+
+
+
 
 function checkIfEmptyAndAdd(aValue){
 
@@ -53,6 +52,8 @@ function checkIfEmptyAndAdd(aValue){
 }
 
 
+
+
 function markAsDone(){
 
     let allLi = $("li");
@@ -66,6 +67,10 @@ function markAsDone(){
 
     console.log(allLi)
 }
+
+
+
+
 
 
 function deleteThings(){
