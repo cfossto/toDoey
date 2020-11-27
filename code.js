@@ -68,16 +68,7 @@ function markAsDone(){
 
         let elemVal = $(this).index();
         console.log(elemVal)
-    
-    
-    
     })
-    
-
-
-        
-
-
     }
 }
 
