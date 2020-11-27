@@ -30,9 +30,9 @@ $("#btn").click( function (){
 
 
 
-function addToListOnScreen(va){
+function addToListOnScreen(inputValue){
 
-    $(".todoList").append("<li>"+va+"</li");
+    $(".todoList").append("<li>"+inputValue+"</li");
 }
 
 
