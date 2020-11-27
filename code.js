@@ -65,7 +65,6 @@ function markAsDone(){
     // Loop through all li-elements
     for (let l of allLi){
 
-
         // On click, toggle to class
         $(l).click( function() {  
             $(this).toggleClass("blue")
@@ -93,4 +92,4 @@ function deleteThings(){
             
             console.log(toDoList) })
     }
-    }
+}
