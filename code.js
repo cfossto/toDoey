@@ -18,9 +18,11 @@ $("#btn").click( function (){
 
 
     addToListOnScreen(inputValue);
+
+
     markAsDone();
     deleteThings();
-
+    
     // Emptys value-field
     $(inputs).val(""); 
 });

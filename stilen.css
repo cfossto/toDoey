@@ -1,13 +1,17 @@
-* {}
+* { box-sizing: border-box; }
 
 body {}
 
-.masterDiv { margin-left: 5%; margin-top: 4%; border-style: solid; padding: 2%; margin-right: 65%; }
+.masterDiv { margin: 7%;}
 
-input { border-radius: 1%; margin-left: 40px; }
+.listDiv { width: 200px;}
 
-input#removeBtn { color: brown; }
+input { border-radius: 1%;}
 
-li { display: table; padding: 10px; background-color: white; }
+input.deleteBtn { color: brown; float: right;  }
 
-.blue { background-color: lightblue; text-decoration: line-through; }
+li { display: table; padding: 10px; background-color: coral; width: 200px;}
+
+.blue { background-color: lightblue; text-decoration: line-through; width: 200px; }
+
+.formDiv { margin-left: 3.5%;}
