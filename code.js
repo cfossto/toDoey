@@ -32,7 +32,7 @@ $("#btn").click( function (){
 
 function addToListOnScreen(inputValue){
 
-    $(".todoList").append("<li>"+inputValue+"</li");
+    $(".todoList").append("<li class='.liNormal'>"+thing+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
 }
 
 
