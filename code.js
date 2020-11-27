@@ -7,15 +7,13 @@ let toDoList = [];
 // Button-click
 $("#btn").click( function (){
     
-    
-    let inputs = $("#inputs");
-    let inputValue = inputs.val()
+    let inputValue = $("#inputs").val()
 
     // Check if empty, else - add
-    checkIfEmptyAndAdd(inputs.val())
+    checkIfEmptyAndAdd(inputValue);
 
     // Log for debugging purposes
-    console.log(toDoList)
+    console.log(toDoList);
 
 
     addToListOnScreen(inputValue);
