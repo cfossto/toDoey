@@ -68,7 +68,7 @@ function markAsDone(){
 
         // On click, toggle to class
         $(listElem).click( function() {  
-            $(this).toggleClass("blue")
+            $(listElem).toggleClass("blue")
 
     })}
 

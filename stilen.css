@@ -2,7 +2,7 @@
 
 body {}
 
-.masterDiv { margin: 7%;}
+.masterDiv { margin: 7%; border: darkblue; border-style: dashed; height: 500px; width: 500px; padding: 2%;}
 
 .listDiv { width: 200px;}
 
