@@ -9,6 +9,7 @@ $("#btn").click( function (){
     
     
     let inputs = $("#inputs");
+    let inputValue = inputs.val()
 
     // Check if empty, else - add
     checkIfEmptyAndAdd(inputs.val())
@@ -16,31 +17,27 @@ $("#btn").click( function (){
     // Log for debugging purposes
     console.log(toDoList)
 
-    // Emptys value-field
-    $(inputs).val(""); 
-   
-    
-    showList();
+
+    addToListOnScreen(inputValue);
     markAsDone();
     deleteThings();
+
+    // Emptys value-field
+    $(inputs).val(""); 
 });
 
 
 
-function showList(){
 
-    let list = $(".todoList");
 
-    // deprecated, but keeping for historic value
-    // list.empty();
+function addToListOnScreen(va){
 
-    for (let thing of toDoList){
+    $(".todoList").append("<li>"+va+"</li");
 
-        // Adding elements to screen-list, one by one.
-        $(".todoList").append("<li class='.liNormal'>"+thing+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
-    }
+
+
+
 }
-
 
 function checkIfEmptyAndAdd(aValue){
 
@@ -64,12 +61,10 @@ function markAsDone(){
 
         $(l).click( function() {  
             $(this).toggleClass("blue")
-    
 
-        let elemVal = $(this).index();
-        console.log(elemVal)
-    })
-    }
+    })}
+
+    console.log(allLi)
 }
 
 
