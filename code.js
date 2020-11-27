@@ -7,6 +7,7 @@ let toDoList = [];
 // Button-click
 $("#btn").click( function (){
     
+    // Get input value from form
     let inputValue = $("#inputs").val()
 
     // Check if empty, else - add
