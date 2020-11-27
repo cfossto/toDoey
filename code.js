@@ -62,10 +62,10 @@ function markAsDone(){
     let allLi = $("li");
 
     // Loop through all li-elements
-    for (let l of allLi){
+    for (let listElem of allLi){
 
         // On click, toggle to class
-        $(l).click( function() {  
+        $(listElem).click( function() {  
             $(this).toggleClass("blue")
 
     })}
@@ -87,7 +87,7 @@ function deleteThings(){
         $(b).click(function () { 
             
             $(this).parent().remove();
-            toDoList.shift(b,1);
+            toDoList.splice(b,1);
             
             console.log(toDoList) })
     }
