@@ -87,25 +87,31 @@ function markAsDone(){
     let allLi = $("li")
 
 
-    // loop through and track click
+   // solved through common index
 
-    for (let li of allLi){
+   for (let i = 0; i<allLi.length; i++){
 
-        $(li).click(function (){
-
-
-
-        })
-
-    // update the item in toDoList
- 
-    
+    $(allLi).click(function (){
 
 
-    //show list on screen again
+        $(this).toggleClass("checked");
+
+        if ( toDoList[i].state == "" ){
+            
+            toDoList[i].state = "checked" }else if ( toDoList[i].state == "checked" ){
+
+                toDoList[i].state = "";
+
+            }
+
 
 
     }
+
+
+    )}
+
+    
 }
 
 
