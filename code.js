@@ -68,12 +68,13 @@ function showListOnScreen(){
 
     for (let i of toDoList){
 
-        let classDetermination = '.li'
-
-        if (i.state == "checked") { classDetermination = "checked" }
-
-        $(".todoList").append( `<li class=${classDetermination}> ${i.name} <input type='button' class='deleteBtn' value='X' ></input> </li> `);
+        $(".todoList").append( `<li class=${i.state}> ${i.name} <input type='button' class='deleteBtn' value='X' ></input> </li> `);
     }
+
+    deleteThings();
+    markAsDone();
+
+
 
 }
 
@@ -91,27 +92,31 @@ function markAsDone(){
 
    for (let i = 0; i<allLi.length; i++){
 
-    $(allLi).click(function (){
+        $(allLi[i]).click(function (){
+
+        $(allLi[i]).toggleClass("checked");
 
 
-        $(this).toggleClass("checked");
 
         if ( toDoList[i].state == "" ){
             
-            toDoList[i].state = "checked" }else if ( toDoList[i].state == "checked" ){
+            toDoList[i].state = "checked" }
+        
+
+            
+        else if ( toDoList[i].state == "checked" ){
 
                 toDoList[i].state = "";
 
             }
 
+            showListOnScreen();
+       }
 
 
-    }
 
+       )}
 
-    )}
-
-    
 }
 
 
