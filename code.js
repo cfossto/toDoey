@@ -33,11 +33,12 @@ function addToList(item){
 
     let thing = item;
 
-    let obj = {"name": thing}
+    let obj = {"name": thing, "state": "" }
 
     toDoList.push(obj)
 
     console.log(toDoList)
+
 }
 
 
@@ -57,6 +58,9 @@ function checkIfEmptyAndAdd(aValue){
 }
 
 
+
+
+// Shows a list on screen
 function showListOnScreen(){
 
 
@@ -64,8 +68,7 @@ function showListOnScreen(){
 
     for (let i of toDoList){
 
-        $(".todoList").append("<li class='.liNormal'>"+i.name+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
-
+        $(".todoList").append( "<li class='.li'>"+ i.name +"<input type='button' class='deleteBtn' value='X' ></input> </li>" );
     }
 
 }
@@ -76,18 +79,33 @@ function showListOnScreen(){
 // Mark thing as done
 function markAsDone(){
 
-    let allLi = $("li");
-
-    // Loop through all li-elements
-    for (let listElem of allLi){
-
-        // On click, toggle to class
-        $(listElem).click( function() {  
-            $(listElem).toggleClass("blue")
-
-    })}
+    // Select all li
+    let allLi = $("li")
 
 
+    // loop through and track click
+
+    for (let li of allLi){
+
+        $(li).click(function (){
+
+            $(this).toggleClass("checked")
+
+
+
+
+
+        })
+
+    // update the item in toDoList
+ 
+    
+
+
+    //show list on screen again
+
+
+    }
 }
 
 

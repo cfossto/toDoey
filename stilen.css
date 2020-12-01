@@ -12,6 +12,6 @@ input.deleteBtn { color: brown; float: right;  }
 
 li { display: table; padding: 10px; background-color: coral; width: 200px;}
 
-.blue { background-color: lightblue; text-decoration: line-through; width: 200px; }
+.checked { background-color: lightblue; text-decoration: line-through; width: 200px; }
 
 .formDiv { margin-left: 3.5%;}
