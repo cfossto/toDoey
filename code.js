@@ -68,7 +68,11 @@ function showListOnScreen(){
 
     for (let i of toDoList){
 
-        $(".todoList").append( "<li class='.li'>"+ i.name +"<input type='button' class='deleteBtn' value='X' ></input> </li>" );
+        let classDetermination = '.li'
+
+        if (i.state == "checked") { classDetermination = "checked" }
+
+        $(".todoList").append( `<li class=${classDetermination}> ${i.name} <input type='button' class='deleteBtn' value='X' ></input> </li> `);
     }
 
 }
@@ -88,10 +92,6 @@ function markAsDone(){
     for (let li of allLi){
 
         $(li).click(function (){
-
-            $(this).toggleClass("checked")
-
-
 
 
 
