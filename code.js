@@ -13,13 +13,9 @@ $("#btn").click( function (){
     // Check if empty, else - add
     checkIfEmptyAndAdd(inputValue);
 
-    // Log for debugging purposes
-    console.log(toDoList);
+    
 
-
-    addToListOnScreen(inputValue);
-
-
+    showListOnScreen();
     markAsDone();
     deleteThings();
     
@@ -31,14 +27,18 @@ $("#btn").click( function (){
 
 
 
-function addToListOnScreen(inputValue){
+// Adding item to list
+function addToList(item){
 
 
-    // Append to list on screen
-    $(".todoList").append("<li class='.liNormal'>"+inputValue+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
+    let thing = item;
+
+    let obj = {"name": thing}
+
+    toDoList.push(obj)
+
+    console.log(toDoList)
 }
-
-
 
 
 function checkIfEmptyAndAdd(aValue){
@@ -52,9 +52,24 @@ function checkIfEmptyAndAdd(aValue){
     }else{
 
         // adds to array
-        toDoList.push(aValue);
+        addToList(aValue)
     }
 }
+
+
+function showListOnScreen(){
+
+
+    $(".todoList").empty();
+
+    for (let i of toDoList){
+
+        $(".todoList").append("<li class='.liNormal'>"+i.name+"<input type='button' class='deleteBtn' value='X' ></input> </li>");
+
+    }
+
+}
+
 
 
 
@@ -72,7 +87,7 @@ function markAsDone(){
 
     })}
 
-    console.log(allLi)
+
 }
 
 
