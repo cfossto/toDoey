@@ -1,8 +1,7 @@
+/* Code for Todoey-exercise*/
 
-
+// main array
 let toDoList = [];
-
-
 
 // Button-click
 $("#btn").click( function (){
@@ -12,9 +11,7 @@ $("#btn").click( function (){
 
     // Check if empty, else - add
     checkIfEmptyAndAdd(inputValue);
-
     
-
     showListOnScreen();
     markAsDone();
     deleteThings();
@@ -33,12 +30,10 @@ function addToList(item){
 
     let thing = item;
 
+    // Create a new list-object, with a state
     let obj = {"name": thing, "state": "" }
 
     toDoList.push(obj)
-
-    console.log(toDoList)
-
 }
 
 
@@ -49,9 +44,7 @@ function checkIfEmptyAndAdd(aValue){
         
         alert("Empty! Add something");
         return false;
-    
     }else{
-
         // adds to array
         addToList(aValue)
     }
@@ -63,19 +56,18 @@ function checkIfEmptyAndAdd(aValue){
 // Shows a list on screen
 function showListOnScreen(){
 
-
+    // Flush list before update
     $(".todoList").empty();
 
+    // Loop through all list-objects
     for (let i of toDoList){
-
+        
+        // Append to li-element in ul
         $(".todoList").append( `<li class=${i.state}> ${i.name} <input type='button' class='deleteBtn' value='X' ></input> </li> `);
     }
 
     deleteThings();
     markAsDone();
-
-
-
 }
 
 
@@ -100,25 +92,15 @@ function markAsDone(){
 
         if ( toDoList[i].state == "" ){
             
-            toDoList[i].state = "checked" }
-        
-
-            
-        else if ( toDoList[i].state == "checked" ){
+            toDoList[i].state = "checked" }else if ( toDoList[i].state == "checked" ){
 
                 toDoList[i].state = "";
 
             }
-
             showListOnScreen();
        }
-
-
-
-       )}
-
+    )}
 }
-
 
 
 
@@ -126,15 +108,19 @@ function markAsDone(){
 
 function deleteThings(){
 
+    // Select all delete-buttons
     let allButtons = $(".deleteBtn")
 
+    // Looping through all delete-buttons
     for (let b of allButtons){
 
+        // Listening for clicks
         $(b).click(function () { 
             
+            // Remove list and remove from array
             $(this).parent().remove();
             toDoList.splice(b,1);
             
-            console.log(toDoList) })
+         })
     }
 }
