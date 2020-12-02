@@ -1,0 +1,14 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+
+/project-template.xml
+/modules.xml
+/misc.xml
+/description.html
+/encodings.xml
+/vcs.xml
+/todoey.iml
+
+out
